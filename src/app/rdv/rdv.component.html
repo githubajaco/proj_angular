@@ -1,0 +1,32 @@
+<div>
+    <h1>Prise de RDV</h1>
+</div>
+<div>
+    <h3>Jour</h3>
+    <mat-form-field>
+        <input matInput (dateChange)="choixDate($event)" [matDatepicker]="picker" placeholder="Choose a date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+</div>
+<div>
+    <h3>Matin</h3>
+    <mat-radio-group [(ngModel)]="valeurButton" aria-label="Select an option">
+        <mat-radio-button value="1">8h30</mat-radio-button>
+        <mat-radio-button value="2">9h30</mat-radio-button>
+        <mat-radio-button value="3">10h30</mat-radio-button>
+        <mat-radio-button value="4">11h30</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div>
+    <h3>Aprés-midi</h3>
+    <mat-radio-group [(ngModel)]="valeurButton" aria-label="Select an option">
+        <mat-radio-button value="5">13h30</mat-radio-button>
+        <mat-radio-button value="6">14h30</mat-radio-button>
+        <mat-radio-button value="7">15h30</mat-radio-button>
+        <mat-radio-button value="8">16h30</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div>
+    <button mat-raised-button color="primary" (click)="envoiResult()">Valider le RDV</button>
+</div>

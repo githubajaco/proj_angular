@@ -1,0 +1,18 @@
+<mat-card>
+    <mat-card-title>Identifiez-vous</mat-card-title>
+
+    <form [formGroup]="form">
+        <!-->voir la variable de component.ts, l'objet formBuider doit être cohérent ds le component.ts-->
+        <mat-form-field>
+            <input matInput required type="email" formControlName="email" placeholder="E-mail">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput required type="password" formControlName="password" placeholder="Mot de passe">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="login()">Connexion</button>
+
+    </form>
+
+</mat-card>

@@ -1,0 +1,45 @@
+<div>
+    <h1>Inscription</h1>
+</div>
+<div>
+    <h3>Merci de remplir les champs suivants :</h3>
+</div>
+<div>
+    <form class="name-form">
+      <table class="FirstName-full-width" cellspacing="0"><tr>
+        <td><mat-form-field class="FirstName-full-width">
+          <input matInput placeholder="First name">
+        </mat-form-field></td>
+        <td><mat-form-field class="LastName-full-width">
+          <input matInput placeholder="Long Last Name That Will Be Truncated">
+        </mat-form-field></td>
+      </tr></table>
+    </form>
+    <form class="Telephone">
+        <mat-form-field class="Telephone-full-width">
+          <span matPrefix>+33 &nbsp;</span>
+          <input type="tel" matInput placeholder="Telephone">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+    </form>
+    <form class="email">
+        <mat-form-field class="email-full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Entrez une adresse mail valide.
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Votre email : <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+    </form>
+    <form class="Password">
+        <mat-form-field class="Password-full-width">
+          <input type="password" matInput placeholder="Password" [formControl]="password">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+        </mat-form-field>
+    </form>
+</div>
+<div>
+    <button mat-raised-button color="primary" (click)="validation()">Valider les coordonnées</button>
+</div>

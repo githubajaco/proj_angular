@@ -1,0 +1,21 @@
+<div class="container">
+    <div>
+        <p>Mon date picker module</p>
+        <mat-form-field>
+            <input (dateChange)="choixDate($event)" [matDatepicker]="picker" matInput placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="br">
+        <p class="p2">Mes boutons radio</p>
+        <mat-radio-group [(ngModel)]="valeurButton" aria-label="Select an option">
+            <mat-radio-button value="1">Option 1</mat-radio-button>
+            <span class="sp"> </span>
+            <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="afficheResult()" type="submit" value="Valider mon choix">Primary</button>
+    </div>
+</div>

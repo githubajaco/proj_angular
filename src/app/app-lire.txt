@@ -1,0 +1,11 @@
+Cette appli est dérivée d'une appli utilisant une api rest :
+des fichiers dont le nom contient 'book' y figure -> il ne seront pas 
+fonctionnels dans l'appli rdv.
+donc ligne de commande
+ 1: ng serve  -> démarrer le serveur de l'appli (localhost:4200)
+ 2: npm run back  -> démarrer le serveur rest api et son auth utilisant db.json (localhost:3000)
+ 3: commandes ng (angular)
+
+ 
+ 
+

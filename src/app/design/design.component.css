@@ -1,0 +1,20 @@
+.container {
+    width: 500px;
+    margin: 200px auto;
+}
+
+.p2 {
+    margin: 20px 20px;
+}
+
+.br {
+    margin: 20px;
+}
+
+.sp {
+    margin: 50px;
+}
+
+button {
+    margin: 20px;
+}

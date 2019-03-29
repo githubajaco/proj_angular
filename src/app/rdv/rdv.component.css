@@ -1,0 +1,16 @@
+div {
+    text-align: center;
+    margin: 30px;
+}
+
+mat-radio-button {
+    margin-right: 25px;
+}
+
+h3 {
+    color: blue;
+}
+
+h1 {
+    color: blueviolet;
+}

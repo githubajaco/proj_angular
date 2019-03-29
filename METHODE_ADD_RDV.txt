@@ -1,0 +1,31 @@
+//Écoutez l'utilisateur avec les Forms - méthode template_OC
+
+//voir à mettre les paramètres qu'il faut (ceux récupérés par la page formulaire)
+addRdv(date_rdv: string, heure_rdv: string,userId: number) {  //voir à mettre les paramètres qu'il faut
+    const rdvObject = {
+      id: 0,
+      date_rdv: '',
+      heure_rdv: '',
+	  userId
+    };
+    rdvObject.date_rdv = date_rdv;
+    rdvObject.heure_rdv = heure_rdv;
+    rdvObject.id = this.rdvs[(this.rdvs.length - 1)].id + 1;
+    this.rdvs.push(rdvObject);
+	//voir quelle est cette fonction
+    this.emitAppareilSubject();
+}
+
+
+"id": 1,
+"date_rdv": "",
+"heure_rdv": "",
+"userId": 1
+
+Cette méthode (qui ira dans rdv.service.ts) crée un objet du bon format, et attribue les attributs qui lui sont passés
+comme arguments. (le server json a l'auto increment) La ligne pour l'id prend l'id du dernier élément actuel de l'array et ajoute 1.  
+Ensuite, l'objet complété est ajouté à l'array et le Subject est déclenché pour tout garder à jour.
+
+    this.appareilService.addRdv(args...);
+    this.router.navigate(['/rdv']);     //??
+  
